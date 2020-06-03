@@ -6,6 +6,9 @@ const bodyParser = require('body-parser')
 require('dotenv/config');
 
 app.use(bodyParser.json())
+
+//config port
+const PORT = process.env.PORT || 5200;
 //import postrouter
 const postsRoute = require('./routes/posts');
 const authRoute = require('./routes/auth')
@@ -30,6 +33,6 @@ mongoose.connect(
     })
 
 
-app.listen(5200,()=>{
-    console.log('server up and running')
+app.listen(PORT,()=>{
+    console.log('server up and running'+PORT)
 })
