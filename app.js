@@ -10,8 +10,8 @@ app.use(bodyParser.json())
 //config port
 const PORT = process.env.PORT || 5200;
 //import postrouter
-const postsRoute = require('./routes/posts');
-const authRoute = require('./routes/auth')
+const postsRoute = require('./src/routes/posts');
+const authRoute = require('./src/routes/auth')
 
 app.use('/posts',postsRoute);
 app.use('/api/user',authRoute)
