@@ -6,7 +6,7 @@ const verify = require('./verifyToken')
 router.get('/', async (req, res) => {
     try {
         const posts = await Post.find();
-        res.json(posts)
+        res.json('there my post ')
     } catch (err) {
         res.json({ message: err })
 
